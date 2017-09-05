@@ -1,0 +1,7 @@
+A random number generator that produces
+nondeterministic random numbers, if supported.
+Unlike the other standard generators, this is not meant to be an engine that generates pseudo-random numbers, but a generator based on stochastic processes to generate
+a sequence of uniformly distributed random numbers. Although, certain library implementations may lack the ability to produce such numbers and employ a random number engine to generate pseudo-random values instead. In this case, entropy returns zero.
+Notice that random devices may not always be available to produce random numbers (and in some systems, they may even never be available). This is signaled by throwing
+an exception derived from the standard exception on construction or when a number is requested with operator().
+Unless the program really requires a stochastic process to generate random numbers, a portable program is encouraged to use an alternate pseudo-random number generator engine instead, or at least provide a recovery method for such exceptions.
