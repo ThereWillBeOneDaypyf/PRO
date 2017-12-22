@@ -8,7 +8,7 @@ int main()
 	while(cnt --)
 	{
 		int n = rand() % 100  ;
-		int m = rand() % 100 * 4500;
+		int m = rand() % 100 ;
 		cout << n << endl << m << endl;
 		for(int i  =0;i<n;i++)
 			cout << rand() % 1000 << endl;
