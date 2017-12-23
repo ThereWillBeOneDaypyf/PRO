@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
-	freopen("1.in", "r", stdin);
-	freopen("1.out", "w", stdout);
+	/*	freopen("1.in", "r", stdin);
+		freopen("1.out", "w", stdout);*/
 	int ka = 0;
 	double a, b, c;
 	while (cin >> a >> b >> c)
@@ -20,8 +20,8 @@ int main()
 		if (v[0] + v[1] > v[2])
 		{
 			double C = v[0] + v[1] + v[2];
-			double ratio = sqrt(1.0 - 1.0 * (a * a + b * b - c * c) / 2.0 / a / b);
-			double S = a * b * ratio / 2;
+			double p = (a + b + c) / 2.0;
+			double S = sqrt(p * (p - a) * (p - b) * (p - c));
 			cout << C << ", "  << S << endl;
 		}
 		else
